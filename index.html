@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Plateforme de Gestion des Inscriptions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="header-image.png" alt="header-image">
+        <h1>FORMULAIRE DE DEPOTS DE SUJET DE MEMOIRE DE LICENCE</h1>
+    </header>
+
+    <form action="traitement.php" method="post" enctype="multipart/form-data">
+        <label for="email">E-mail</label>
+        <input type="text" id="email" name="email" required placeholder="Entrer votre E-mail">
+
+        <label for="nom">Prénom</label>
+        <input type="text" id="prenom" name="prenom" required placeholder="Entrer votre Prénom">
+
+        <label for="nom">Nom</label>
+        <input type="text" id="nom" name="nom" required placeholder="Entrer votre Nom ...">
+
+        <label for="sexe">Sexe</label>
+        <select id="sexe" name="sexe" required>
+            <option value="" hidden>-- Choisir une valeur ---</option>  
+            <option value="">Homme</option>
+            <option value="">Femme</option>
+        </select>
+
+        <label for="nom">Date de Naissance</label>
+        <input type="date" id="datenaiss" name="datenaiss" required placeholder="Date de Naissance ...">
+
+        <label for="nom">Lieu de Naissance</label>
+        <input type="text" id="lieunaiss" name="lieunaiss" required placeholder="Lieu de Naissance ...">
+
+        <label for="nom">Téléphone</label>
+        <input type="tel" id="phone" name="phone" required placeholder="Entrer votre numéro ici ...">
+
+        <label for="nom">Votre CV</label>
+        <input type="file" id="cv" name="cv" required placeholder="Choisissez des fichiers ou glissez déposez directement" title="Choisissez des fichiers ou glissez déposez directement">
+
+        <label for="titre" aria-required="true">Titre</label>
+        <textarea name="titre" id="titre" cols="30" rows="5" placeholder="Entrer titre"></textarea>
+
+        <label for="domaine">Domaine</label>
+            <select id="domaine" name="domaine" required>
+                <option value="" hidden>-- Choisir une valeur ---</option>  
+                <option value="">Ecomonie & Gestion</option>
+                <option value="">MIO</option>
+                <option value="">Droit</option>
+                <option value="">Sociologie</option>
+            </select>
+
+        <label for="nom">Pj propositions</label>
+        <input type="file" id="propositions" name="propositions" required placeholder="Choisissez des fichiers ou glissez déposez directement" title="Choisissez des fichiers ou glissez déposez directement">
+
+        <label for="niveau">Niveau du sujet</label>
+            <select id="niveau" name="niveau" required>
+                <option value="" hidden>-- Choisir une valeur ---</option>  
+                <option value="">LICENCE</option>
+                <option value="">MASTER</option>
+            </select>
+
+            <label for="classe">Votre classe</label>
+            <select id="classe" name="classe" required>
+                <option value="" hidden>-- Choisir une valeur ---</option>  
+                <option value=""> LICENCE MIO</option>
+                <option value=""> MASTER MSIA</option>
+                <option value="">LICENCE ECOGES</option>
+            </select>
+            
+            <input type="submit" value="ENVOYER">
+            <p>La confirmation de votre inscription vous sera envoyée dans votre boite mail dès la semaine prochaine</p>
+    </form>
+</body>
+</html>
